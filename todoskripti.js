@@ -11,7 +11,7 @@ let nayta = 1;
 // Haetaan localStorageen stringinä tallennettu lista ja muutetaan se arrayksi käsittelya varten
 function haeLista() {
   let nykyinenTodoLista = localStorage.getItem("todoTallennetut");
-  if (nykyinenTodoLista == "") {
+  if (nykyinenTodoLista == null || nykyinenTodoLista == "") {
     todoLista = [];
   } else {
     todoLista = nykyinenTodoLista.split(",");
